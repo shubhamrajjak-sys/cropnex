@@ -12,8 +12,10 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppRouteImport } from './routes/_app'
 import { Route as LoginRouteImport } from './routes/login'
+import { Route as AppAdvisoryRouteImport } from './routes/_app.advisory'
 import { Route as AppAssistantRouteImport } from './routes/_app.assistant'
 import { Route as AppDashboardRouteImport } from './routes/_app.dashboard'
+import { Route as AppExpertRouteImport } from './routes/_app.expert'
 import { Route as AppFarmRouteImport } from './routes/_app.farm'
 import { Route as AppForecastRouteImport } from './routes/_app.forecast'
 import { Route as AppHotspotsRouteImport } from './routes/_app.hotspots'
@@ -35,6 +37,11 @@ const LoginRoute = LoginRouteImport.update({
   path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppAdvisoryRoute = AppAdvisoryRouteImport.update({
+  id: '/advisory',
+  path: '/advisory',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppAssistantRoute = AppAssistantRouteImport.update({
   id: '/assistant',
   path: '/assistant',
@@ -43,6 +50,11 @@ const AppAssistantRoute = AppAssistantRouteImport.update({
 const AppDashboardRoute = AppDashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppExpertRoute = AppExpertRouteImport.update({
+  id: '/expert',
+  path: '/expert',
   getParentRoute: () => AppRoute,
 } as any)
 const AppFarmRoute = AppFarmRouteImport.update({
@@ -79,8 +91,10 @@ const AppSimulatorRoute = AppSimulatorRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/login': typeof LoginRoute
+  '/advisory': typeof AppAdvisoryRoute
   '/assistant': typeof AppAssistantRoute
   '/dashboard': typeof AppDashboardRoute
+  '/expert': typeof AppExpertRoute
   '/farm': typeof AppFarmRoute
   '/forecast': typeof AppForecastRoute
   '/hotspots': typeof AppHotspotsRoute
@@ -91,8 +105,10 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/login': typeof LoginRoute
+  '/advisory': typeof AppAdvisoryRoute
   '/assistant': typeof AppAssistantRoute
   '/dashboard': typeof AppDashboardRoute
+  '/expert': typeof AppExpertRoute
   '/farm': typeof AppFarmRoute
   '/forecast': typeof AppForecastRoute
   '/hotspots': typeof AppHotspotsRoute
@@ -105,8 +121,10 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/_app': typeof AppRouteWithChildren
   '/login': typeof LoginRoute
+  '/_app/advisory': typeof AppAdvisoryRoute
   '/_app/assistant': typeof AppAssistantRoute
   '/_app/dashboard': typeof AppDashboardRoute
+  '/_app/expert': typeof AppExpertRoute
   '/_app/farm': typeof AppFarmRoute
   '/_app/forecast': typeof AppForecastRoute
   '/_app/hotspots': typeof AppHotspotsRoute
@@ -119,8 +137,10 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/login'
+    | '/advisory'
     | '/assistant'
     | '/dashboard'
+    | '/expert'
     | '/farm'
     | '/forecast'
     | '/hotspots'
@@ -131,8 +151,10 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/login'
+    | '/advisory'
     | '/assistant'
     | '/dashboard'
+    | '/expert'
     | '/farm'
     | '/forecast'
     | '/hotspots'
@@ -144,8 +166,10 @@ export interface FileRouteTypes {
     | '/'
     | '/_app'
     | '/login'
+    | '/_app/advisory'
     | '/_app/assistant'
     | '/_app/dashboard'
+    | '/_app/expert'
     | '/_app/farm'
     | '/_app/forecast'
     | '/_app/hotspots'
@@ -183,6 +207,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_app/advisory': {
+      id: '/_app/advisory'
+      path: '/advisory'
+      fullPath: '/advisory'
+      preLoaderRoute: typeof AppAdvisoryRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/_app/assistant': {
       id: '/_app/assistant'
       path: '/assistant'
@@ -195,6 +226,13 @@ declare module '@tanstack/react-router' {
       path: '/dashboard'
       fullPath: '/dashboard'
       preLoaderRoute: typeof AppDashboardRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/expert': {
+      id: '/_app/expert'
+      path: '/expert'
+      fullPath: '/expert'
+      preLoaderRoute: typeof AppExpertRouteImport
       parentRoute: typeof AppRoute
     }
     '/_app/farm': {
@@ -243,8 +281,10 @@ declare module '@tanstack/react-router' {
 }
 
 interface AppRouteChildren {
+  AppAdvisoryRoute: typeof AppAdvisoryRoute
   AppAssistantRoute: typeof AppAssistantRoute
   AppDashboardRoute: typeof AppDashboardRoute
+  AppExpertRoute: typeof AppExpertRoute
   AppFarmRoute: typeof AppFarmRoute
   AppForecastRoute: typeof AppForecastRoute
   AppHotspotsRoute: typeof AppHotspotsRoute
@@ -254,8 +294,10 @@ interface AppRouteChildren {
 }
 
 const AppRouteChildren: AppRouteChildren = {
+  AppAdvisoryRoute: AppAdvisoryRoute,
   AppAssistantRoute: AppAssistantRoute,
   AppDashboardRoute: AppDashboardRoute,
+  AppExpertRoute: AppExpertRoute,
   AppFarmRoute: AppFarmRoute,
   AppForecastRoute: AppForecastRoute,
   AppHotspotsRoute: AppHotspotsRoute,
