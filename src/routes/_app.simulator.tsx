@@ -110,7 +110,7 @@ function Simulator() {
                 min={0}
                 max={CROP_STAGES.length - 1}
                 step={1}
-                onValueChange={([val]) => setV((prev) => ({ ...prev, stage: val }))}
+                onValueChange={([val]) => setV((prev) => ({ ...prev, stage: val ?? 0 }))}
               />
             </div>
           </div>

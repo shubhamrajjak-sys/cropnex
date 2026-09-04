@@ -28,7 +28,7 @@ function HotspotPage() {
   const [pest, setPest] = useState(ALL);
   const [district, setDistrict] = useState(ALL);
   const [level, setLevel] = useState(ALL);
-  const [selected, setSelected] = useState<Hotspot | null>(HOTSPOTS[0]);
+  const [selected, setSelected] = useState<Hotspot | null>(HOTSPOTS[0] ?? null);
 
   const filtered = useMemo(
     () =>
@@ -98,7 +98,7 @@ function HotspotPage() {
       </SectionCard>
 
       <div className="grid gap-6 lg:grid-cols-[1.6fr_1fr]">
-        <HotspotMap hotspots={filtered} selectedId={selected?.id} onSelect={setSelected} />
+        <HotspotMap hotspots={filtered} selectedId={selected?.id ?? null} onSelect={setSelected} />
 
         <div className="space-y-6">
           {selected && filtered.some((h) => h.id === selected.id) ? (

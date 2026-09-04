@@ -30,7 +30,7 @@ const TABS = [
 function ExpertReview() {
   const [cases, setCases] = useState<ExpertCase[]>(EXPERT_CASES);
   const [tab, setTab] = useState<(typeof TABS)[number]["key"]>("pending");
-  const [selectedId, setSelectedId] = useState<string | null>(EXPERT_CASES[0].id);
+  const [selectedId, setSelectedId] = useState<string | null>(EXPERT_CASES[0]!.id);
   const [correction, setCorrection] = useState("");
 
   const list = useMemo(() => cases.filter((c) => c.state === tab), [cases, tab]);
