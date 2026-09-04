@@ -45,7 +45,7 @@ function Assistant() {
     setInput("");
     setTyping(true);
     const replies = ASSISTANT_REPLY[lang];
-    const reply = replies[turn.current % replies.length];
+    const reply = replies[turn.current % replies.length] ?? replies[0]!;
     turn.current += 1;
     window.setTimeout(() => {
       setMessages((m) => [...m, { id: Date.now() + 1, from: "ai", text: reply }]);

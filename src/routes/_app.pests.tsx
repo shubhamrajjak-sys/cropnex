@@ -27,7 +27,7 @@ const STATUS_STYLE: Record<string, string> = {
 };
 
 function PestMonitoring() {
-  const [active, setActive] = useState(TRAPS[0]);
+  const [active, setActive] = useState(TRAPS[0]!);
 
   return (
     <>
@@ -53,7 +53,7 @@ function PestMonitoring() {
                 onClick={() => setActive(t)}
                 className={cn(
                   "rounded-xl border p-4 text-left transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]",
-                  active.id === t.id ? "border-primary bg-primary/5" : "border-border",
+                  active!.id === t.id ? "border-primary bg-primary/5" : "border-border",
                 )}
               >
                 <div className="flex items-center justify-between gap-2">
@@ -73,16 +73,16 @@ function PestMonitoring() {
           </div>
         </SectionCard>
 
-        <SectionCard title={`${active.id} · ${active.location}`} subtitle="Trap camera & sensor snapshot">
+        <SectionCard title={`${active!.id} · ${active!.location}`} subtitle="Trap camera & sensor snapshot">
           <div className="relative grid h-44 place-items-center overflow-hidden rounded-xl border border-border bg-[oklch(0.28_0.03_150)]">
             <div className="absolute inset-0 grain-grid opacity-30" />
             <div className="relative text-center text-[oklch(0.9_0.03_145)]">
               <Camera className="mx-auto size-7" />
               <p className="mt-2 text-xs">
-                {active.status === "Offline" ? "Camera offline — awaiting reconnection" : "Live trap frame · 1 fps"}
+                {active!.status === "Offline" ? "Camera offline — awaiting reconnection" : "Live trap frame · 1 fps"}
               </p>
             </div>
-            {active.status !== "Offline" ? (
+            {active!.status !== "Offline" ? (
               <>
                 <span className="absolute left-[22%] top-[38%] size-8 rounded-md border-2 border-risk-moderate" />
                 <span className="absolute left-[54%] top-[56%] size-6 rounded-md border-2 border-risk-high" />
@@ -91,8 +91,8 @@ function PestMonitoring() {
             ) : null}
           </div>
           <div className="mt-4 space-y-3">
-            <ScoreBar value={Math.min(100, active.pests * 2)} label="Pest pressure index" />
-            <ScoreBar value={active.battery} label="Battery" />
+            <ScoreBar value={Math.min(100, active!.pests * 2)} label="Pest pressure index" />
+            <ScoreBar value={active!.battery} label="Battery" />
           </div>
           <Button variant="outline" className="mt-4 w-full">
             Request manual inspection

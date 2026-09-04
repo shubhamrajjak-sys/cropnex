@@ -13,14 +13,27 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppRouteImport } from './routes/_app'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as AppAdvisoryRouteImport } from './routes/_app.advisory'
+import { Route as AppAnalyticsRouteImport } from './routes/_app.analytics'
+import { Route as AppArchitectureRouteImport } from './routes/_app.architecture'
 import { Route as AppAssistantRouteImport } from './routes/_app.assistant'
 import { Route as AppDashboardRouteImport } from './routes/_app.dashboard'
 import { Route as AppExpertRouteImport } from './routes/_app.expert'
+import { Route as AppExtensionRouteImport } from './routes/_app.extension'
 import { Route as AppFarmRouteImport } from './routes/_app.farm'
+import { Route as AppFieldIntelligenceRouteImport } from './routes/_app.field-intelligence'
+import { Route as AppFollowupRouteImport } from './routes/_app.followup'
 import { Route as AppForecastRouteImport } from './routes/_app.forecast'
 import { Route as AppHotspotsRouteImport } from './routes/_app.hotspots'
+import { Route as AppLabRouteImport } from './routes/_app.lab'
+import { Route as AppLearningRouteImport } from './routes/_app.learning'
+import { Route as AppNotificationsRouteImport } from './routes/_app.notifications'
+import { Route as AppOfficialRouteImport } from './routes/_app.official'
+import { Route as AppOutbreakRouteImport } from './routes/_app.outbreak'
 import { Route as AppPestsRouteImport } from './routes/_app.pests'
+import { Route as AppProfileRouteImport } from './routes/_app.profile'
+import { Route as AppRiskEngineRouteImport } from './routes/_app.risk-engine'
 import { Route as AppScannerRouteImport } from './routes/_app.scanner'
+import { Route as AppSettingsRouteImport } from './routes/_app.settings'
 import { Route as AppSimulatorRouteImport } from './routes/_app.simulator'
 
 const IndexRoute = IndexRouteImport.update({
@@ -42,6 +55,16 @@ const AppAdvisoryRoute = AppAdvisoryRouteImport.update({
   path: '/advisory',
   getParentRoute: () => AppRoute,
 } as any)
+const AppAnalyticsRoute = AppAnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppArchitectureRoute = AppArchitectureRouteImport.update({
+  id: '/architecture',
+  path: '/architecture',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppAssistantRoute = AppAssistantRouteImport.update({
   id: '/assistant',
   path: '/assistant',
@@ -57,9 +80,24 @@ const AppExpertRoute = AppExpertRouteImport.update({
   path: '/expert',
   getParentRoute: () => AppRoute,
 } as any)
+const AppExtensionRoute = AppExtensionRouteImport.update({
+  id: '/extension',
+  path: '/extension',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppFarmRoute = AppFarmRouteImport.update({
   id: '/farm',
   path: '/farm',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppFieldIntelligenceRoute = AppFieldIntelligenceRouteImport.update({
+  id: '/field-intelligence',
+  path: '/field-intelligence',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppFollowupRoute = AppFollowupRouteImport.update({
+  id: '/followup',
+  path: '/followup',
   getParentRoute: () => AppRoute,
 } as any)
 const AppForecastRoute = AppForecastRouteImport.update({
@@ -72,14 +110,54 @@ const AppHotspotsRoute = AppHotspotsRouteImport.update({
   path: '/hotspots',
   getParentRoute: () => AppRoute,
 } as any)
+const AppLabRoute = AppLabRouteImport.update({
+  id: '/lab',
+  path: '/lab',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppLearningRoute = AppLearningRouteImport.update({
+  id: '/learning',
+  path: '/learning',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppNotificationsRoute = AppNotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppOfficialRoute = AppOfficialRouteImport.update({
+  id: '/official',
+  path: '/official',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppOutbreakRoute = AppOutbreakRouteImport.update({
+  id: '/outbreak',
+  path: '/outbreak',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppPestsRoute = AppPestsRouteImport.update({
   id: '/pests',
   path: '/pests',
   getParentRoute: () => AppRoute,
 } as any)
+const AppProfileRoute = AppProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppRiskEngineRoute = AppRiskEngineRouteImport.update({
+  id: '/risk-engine',
+  path: '/risk-engine',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppScannerRoute = AppScannerRouteImport.update({
   id: '/scanner',
   path: '/scanner',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSettingsRoute = AppSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
   getParentRoute: () => AppRoute,
 } as any)
 const AppSimulatorRoute = AppSimulatorRouteImport.update({
@@ -92,28 +170,54 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/login': typeof LoginRoute
   '/advisory': typeof AppAdvisoryRoute
+  '/analytics': typeof AppAnalyticsRoute
+  '/architecture': typeof AppArchitectureRoute
   '/assistant': typeof AppAssistantRoute
   '/dashboard': typeof AppDashboardRoute
   '/expert': typeof AppExpertRoute
+  '/extension': typeof AppExtensionRoute
   '/farm': typeof AppFarmRoute
+  '/field-intelligence': typeof AppFieldIntelligenceRoute
+  '/followup': typeof AppFollowupRoute
   '/forecast': typeof AppForecastRoute
   '/hotspots': typeof AppHotspotsRoute
+  '/lab': typeof AppLabRoute
+  '/learning': typeof AppLearningRoute
+  '/notifications': typeof AppNotificationsRoute
+  '/official': typeof AppOfficialRoute
+  '/outbreak': typeof AppOutbreakRoute
   '/pests': typeof AppPestsRoute
+  '/profile': typeof AppProfileRoute
+  '/risk-engine': typeof AppRiskEngineRoute
   '/scanner': typeof AppScannerRoute
+  '/settings': typeof AppSettingsRoute
   '/simulator': typeof AppSimulatorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/login': typeof LoginRoute
   '/advisory': typeof AppAdvisoryRoute
+  '/analytics': typeof AppAnalyticsRoute
+  '/architecture': typeof AppArchitectureRoute
   '/assistant': typeof AppAssistantRoute
   '/dashboard': typeof AppDashboardRoute
   '/expert': typeof AppExpertRoute
+  '/extension': typeof AppExtensionRoute
   '/farm': typeof AppFarmRoute
+  '/field-intelligence': typeof AppFieldIntelligenceRoute
+  '/followup': typeof AppFollowupRoute
   '/forecast': typeof AppForecastRoute
   '/hotspots': typeof AppHotspotsRoute
+  '/lab': typeof AppLabRoute
+  '/learning': typeof AppLearningRoute
+  '/notifications': typeof AppNotificationsRoute
+  '/official': typeof AppOfficialRoute
+  '/outbreak': typeof AppOutbreakRoute
   '/pests': typeof AppPestsRoute
+  '/profile': typeof AppProfileRoute
+  '/risk-engine': typeof AppRiskEngineRoute
   '/scanner': typeof AppScannerRoute
+  '/settings': typeof AppSettingsRoute
   '/simulator': typeof AppSimulatorRoute
 }
 export interface FileRoutesById {
@@ -122,14 +226,27 @@ export interface FileRoutesById {
   '/_app': typeof AppRouteWithChildren
   '/login': typeof LoginRoute
   '/_app/advisory': typeof AppAdvisoryRoute
+  '/_app/analytics': typeof AppAnalyticsRoute
+  '/_app/architecture': typeof AppArchitectureRoute
   '/_app/assistant': typeof AppAssistantRoute
   '/_app/dashboard': typeof AppDashboardRoute
   '/_app/expert': typeof AppExpertRoute
+  '/_app/extension': typeof AppExtensionRoute
   '/_app/farm': typeof AppFarmRoute
+  '/_app/field-intelligence': typeof AppFieldIntelligenceRoute
+  '/_app/followup': typeof AppFollowupRoute
   '/_app/forecast': typeof AppForecastRoute
   '/_app/hotspots': typeof AppHotspotsRoute
+  '/_app/lab': typeof AppLabRoute
+  '/_app/learning': typeof AppLearningRoute
+  '/_app/notifications': typeof AppNotificationsRoute
+  '/_app/official': typeof AppOfficialRoute
+  '/_app/outbreak': typeof AppOutbreakRoute
   '/_app/pests': typeof AppPestsRoute
+  '/_app/profile': typeof AppProfileRoute
+  '/_app/risk-engine': typeof AppRiskEngineRoute
   '/_app/scanner': typeof AppScannerRoute
+  '/_app/settings': typeof AppSettingsRoute
   '/_app/simulator': typeof AppSimulatorRoute
 }
 export interface FileRouteTypes {
@@ -138,28 +255,54 @@ export interface FileRouteTypes {
     | '/'
     | '/login'
     | '/advisory'
+    | '/analytics'
+    | '/architecture'
     | '/assistant'
     | '/dashboard'
     | '/expert'
+    | '/extension'
     | '/farm'
+    | '/field-intelligence'
+    | '/followup'
     | '/forecast'
     | '/hotspots'
+    | '/lab'
+    | '/learning'
+    | '/notifications'
+    | '/official'
+    | '/outbreak'
     | '/pests'
+    | '/profile'
+    | '/risk-engine'
     | '/scanner'
+    | '/settings'
     | '/simulator'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/login'
     | '/advisory'
+    | '/analytics'
+    | '/architecture'
     | '/assistant'
     | '/dashboard'
     | '/expert'
+    | '/extension'
     | '/farm'
+    | '/field-intelligence'
+    | '/followup'
     | '/forecast'
     | '/hotspots'
+    | '/lab'
+    | '/learning'
+    | '/notifications'
+    | '/official'
+    | '/outbreak'
     | '/pests'
+    | '/profile'
+    | '/risk-engine'
     | '/scanner'
+    | '/settings'
     | '/simulator'
   id:
     | '__root__'
@@ -167,14 +310,27 @@ export interface FileRouteTypes {
     | '/_app'
     | '/login'
     | '/_app/advisory'
+    | '/_app/analytics'
+    | '/_app/architecture'
     | '/_app/assistant'
     | '/_app/dashboard'
     | '/_app/expert'
+    | '/_app/extension'
     | '/_app/farm'
+    | '/_app/field-intelligence'
+    | '/_app/followup'
     | '/_app/forecast'
     | '/_app/hotspots'
+    | '/_app/lab'
+    | '/_app/learning'
+    | '/_app/notifications'
+    | '/_app/official'
+    | '/_app/outbreak'
     | '/_app/pests'
+    | '/_app/profile'
+    | '/_app/risk-engine'
     | '/_app/scanner'
+    | '/_app/settings'
     | '/_app/simulator'
   fileRoutesById: FileRoutesById
 }
@@ -214,6 +370,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppAdvisoryRouteImport
       parentRoute: typeof AppRoute
     }
+    '/_app/analytics': {
+      id: '/_app/analytics'
+      path: '/analytics'
+      fullPath: '/analytics'
+      preLoaderRoute: typeof AppAnalyticsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/architecture': {
+      id: '/_app/architecture'
+      path: '/architecture'
+      fullPath: '/architecture'
+      preLoaderRoute: typeof AppArchitectureRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/_app/assistant': {
       id: '/_app/assistant'
       path: '/assistant'
@@ -235,11 +405,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppExpertRouteImport
       parentRoute: typeof AppRoute
     }
+    '/_app/extension': {
+      id: '/_app/extension'
+      path: '/extension'
+      fullPath: '/extension'
+      preLoaderRoute: typeof AppExtensionRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/_app/farm': {
       id: '/_app/farm'
       path: '/farm'
       fullPath: '/farm'
       preLoaderRoute: typeof AppFarmRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/field-intelligence': {
+      id: '/_app/field-intelligence'
+      path: '/field-intelligence'
+      fullPath: '/field-intelligence'
+      preLoaderRoute: typeof AppFieldIntelligenceRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/followup': {
+      id: '/_app/followup'
+      path: '/followup'
+      fullPath: '/followup'
+      preLoaderRoute: typeof AppFollowupRouteImport
       parentRoute: typeof AppRoute
     }
     '/_app/forecast': {
@@ -256,6 +447,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppHotspotsRouteImport
       parentRoute: typeof AppRoute
     }
+    '/_app/lab': {
+      id: '/_app/lab'
+      path: '/lab'
+      fullPath: '/lab'
+      preLoaderRoute: typeof AppLabRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/learning': {
+      id: '/_app/learning'
+      path: '/learning'
+      fullPath: '/learning'
+      preLoaderRoute: typeof AppLearningRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/notifications': {
+      id: '/_app/notifications'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof AppNotificationsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/official': {
+      id: '/_app/official'
+      path: '/official'
+      fullPath: '/official'
+      preLoaderRoute: typeof AppOfficialRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/outbreak': {
+      id: '/_app/outbreak'
+      path: '/outbreak'
+      fullPath: '/outbreak'
+      preLoaderRoute: typeof AppOutbreakRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/_app/pests': {
       id: '/_app/pests'
       path: '/pests'
@@ -263,11 +489,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppPestsRouteImport
       parentRoute: typeof AppRoute
     }
+    '/_app/profile': {
+      id: '/_app/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof AppProfileRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/risk-engine': {
+      id: '/_app/risk-engine'
+      path: '/risk-engine'
+      fullPath: '/risk-engine'
+      preLoaderRoute: typeof AppRiskEngineRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/_app/scanner': {
       id: '/_app/scanner'
       path: '/scanner'
       fullPath: '/scanner'
       preLoaderRoute: typeof AppScannerRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/settings': {
+      id: '/_app/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof AppSettingsRouteImport
       parentRoute: typeof AppRoute
     }
     '/_app/simulator': {
@@ -282,27 +529,53 @@ declare module '@tanstack/react-router' {
 
 interface AppRouteChildren {
   AppAdvisoryRoute: typeof AppAdvisoryRoute
+  AppAnalyticsRoute: typeof AppAnalyticsRoute
+  AppArchitectureRoute: typeof AppArchitectureRoute
   AppAssistantRoute: typeof AppAssistantRoute
   AppDashboardRoute: typeof AppDashboardRoute
   AppExpertRoute: typeof AppExpertRoute
+  AppExtensionRoute: typeof AppExtensionRoute
   AppFarmRoute: typeof AppFarmRoute
+  AppFieldIntelligenceRoute: typeof AppFieldIntelligenceRoute
+  AppFollowupRoute: typeof AppFollowupRoute
   AppForecastRoute: typeof AppForecastRoute
   AppHotspotsRoute: typeof AppHotspotsRoute
+  AppLabRoute: typeof AppLabRoute
+  AppLearningRoute: typeof AppLearningRoute
+  AppNotificationsRoute: typeof AppNotificationsRoute
+  AppOfficialRoute: typeof AppOfficialRoute
+  AppOutbreakRoute: typeof AppOutbreakRoute
   AppPestsRoute: typeof AppPestsRoute
+  AppProfileRoute: typeof AppProfileRoute
+  AppRiskEngineRoute: typeof AppRiskEngineRoute
   AppScannerRoute: typeof AppScannerRoute
+  AppSettingsRoute: typeof AppSettingsRoute
   AppSimulatorRoute: typeof AppSimulatorRoute
 }
 
 const AppRouteChildren: AppRouteChildren = {
   AppAdvisoryRoute: AppAdvisoryRoute,
+  AppAnalyticsRoute: AppAnalyticsRoute,
+  AppArchitectureRoute: AppArchitectureRoute,
   AppAssistantRoute: AppAssistantRoute,
   AppDashboardRoute: AppDashboardRoute,
   AppExpertRoute: AppExpertRoute,
+  AppExtensionRoute: AppExtensionRoute,
   AppFarmRoute: AppFarmRoute,
+  AppFieldIntelligenceRoute: AppFieldIntelligenceRoute,
+  AppFollowupRoute: AppFollowupRoute,
   AppForecastRoute: AppForecastRoute,
   AppHotspotsRoute: AppHotspotsRoute,
+  AppLabRoute: AppLabRoute,
+  AppLearningRoute: AppLearningRoute,
+  AppNotificationsRoute: AppNotificationsRoute,
+  AppOfficialRoute: AppOfficialRoute,
+  AppOutbreakRoute: AppOutbreakRoute,
   AppPestsRoute: AppPestsRoute,
+  AppProfileRoute: AppProfileRoute,
+  AppRiskEngineRoute: AppRiskEngineRoute,
   AppScannerRoute: AppScannerRoute,
+  AppSettingsRoute: AppSettingsRoute,
   AppSimulatorRoute: AppSimulatorRoute,
 }
 
