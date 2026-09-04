@@ -12,12 +12,14 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AppRouteImport } from './routes/_app'
 import { Route as LoginRouteImport } from './routes/login'
+import { Route as AppAssistantRouteImport } from './routes/_app.assistant'
 import { Route as AppDashboardRouteImport } from './routes/_app.dashboard'
 import { Route as AppFarmRouteImport } from './routes/_app.farm'
 import { Route as AppForecastRouteImport } from './routes/_app.forecast'
 import { Route as AppHotspotsRouteImport } from './routes/_app.hotspots'
 import { Route as AppPestsRouteImport } from './routes/_app.pests'
 import { Route as AppScannerRouteImport } from './routes/_app.scanner'
+import { Route as AppSimulatorRouteImport } from './routes/_app.simulator'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -32,6 +34,11 @@ const LoginRoute = LoginRouteImport.update({
   id: '/login',
   path: '/login',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AppAssistantRoute = AppAssistantRouteImport.update({
+  id: '/assistant',
+  path: '/assistant',
+  getParentRoute: () => AppRoute,
 } as any)
 const AppDashboardRoute = AppDashboardRouteImport.update({
   id: '/dashboard',
@@ -63,71 +70,88 @@ const AppScannerRoute = AppScannerRouteImport.update({
   path: '/scanner',
   getParentRoute: () => AppRoute,
 } as any)
+const AppSimulatorRoute = AppSimulatorRouteImport.update({
+  id: '/simulator',
+  path: '/simulator',
+  getParentRoute: () => AppRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/login': typeof LoginRoute
+  '/assistant': typeof AppAssistantRoute
   '/dashboard': typeof AppDashboardRoute
   '/farm': typeof AppFarmRoute
   '/forecast': typeof AppForecastRoute
   '/hotspots': typeof AppHotspotsRoute
   '/pests': typeof AppPestsRoute
   '/scanner': typeof AppScannerRoute
+  '/simulator': typeof AppSimulatorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/login': typeof LoginRoute
+  '/assistant': typeof AppAssistantRoute
   '/dashboard': typeof AppDashboardRoute
   '/farm': typeof AppFarmRoute
   '/forecast': typeof AppForecastRoute
   '/hotspots': typeof AppHotspotsRoute
   '/pests': typeof AppPestsRoute
   '/scanner': typeof AppScannerRoute
+  '/simulator': typeof AppSimulatorRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/_app': typeof AppRouteWithChildren
   '/login': typeof LoginRoute
+  '/_app/assistant': typeof AppAssistantRoute
   '/_app/dashboard': typeof AppDashboardRoute
   '/_app/farm': typeof AppFarmRoute
   '/_app/forecast': typeof AppForecastRoute
   '/_app/hotspots': typeof AppHotspotsRoute
   '/_app/pests': typeof AppPestsRoute
   '/_app/scanner': typeof AppScannerRoute
+  '/_app/simulator': typeof AppSimulatorRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/login'
+    | '/assistant'
     | '/dashboard'
     | '/farm'
     | '/forecast'
     | '/hotspots'
     | '/pests'
     | '/scanner'
+    | '/simulator'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/login'
+    | '/assistant'
     | '/dashboard'
     | '/farm'
     | '/forecast'
     | '/hotspots'
     | '/pests'
     | '/scanner'
+    | '/simulator'
   id:
     | '__root__'
     | '/'
     | '/_app'
     | '/login'
+    | '/_app/assistant'
     | '/_app/dashboard'
     | '/_app/farm'
     | '/_app/forecast'
     | '/_app/hotspots'
     | '/_app/pests'
     | '/_app/scanner'
+    | '/_app/simulator'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -158,6 +182,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/login'
       preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/_app/assistant': {
+      id: '/_app/assistant'
+      path: '/assistant'
+      fullPath: '/assistant'
+      preLoaderRoute: typeof AppAssistantRouteImport
+      parentRoute: typeof AppRoute
     }
     '/_app/dashboard': {
       id: '/_app/dashboard'
@@ -201,25 +232,36 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppScannerRouteImport
       parentRoute: typeof AppRoute
     }
+    '/_app/simulator': {
+      id: '/_app/simulator'
+      path: '/simulator'
+      fullPath: '/simulator'
+      preLoaderRoute: typeof AppSimulatorRouteImport
+      parentRoute: typeof AppRoute
+    }
   }
 }
 
 interface AppRouteChildren {
+  AppAssistantRoute: typeof AppAssistantRoute
   AppDashboardRoute: typeof AppDashboardRoute
   AppFarmRoute: typeof AppFarmRoute
   AppForecastRoute: typeof AppForecastRoute
   AppHotspotsRoute: typeof AppHotspotsRoute
   AppPestsRoute: typeof AppPestsRoute
   AppScannerRoute: typeof AppScannerRoute
+  AppSimulatorRoute: typeof AppSimulatorRoute
 }
 
 const AppRouteChildren: AppRouteChildren = {
+  AppAssistantRoute: AppAssistantRoute,
   AppDashboardRoute: AppDashboardRoute,
   AppFarmRoute: AppFarmRoute,
   AppForecastRoute: AppForecastRoute,
   AppHotspotsRoute: AppHotspotsRoute,
   AppPestsRoute: AppPestsRoute,
   AppScannerRoute: AppScannerRoute,
+  AppSimulatorRoute: AppSimulatorRoute,
 }
 
 const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
