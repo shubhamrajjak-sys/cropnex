@@ -10,33 +10,130 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AppRouteImport } from './routes/_app'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as AppDashboardRouteImport } from './routes/_app.dashboard'
+import { Route as AppFarmRouteImport } from './routes/_app.farm'
+import { Route as AppForecastRouteImport } from './routes/_app.forecast'
+import { Route as AppHotspotsRouteImport } from './routes/_app.hotspots'
+import { Route as AppPestsRouteImport } from './routes/_app.pests'
+import { Route as AppScannerRouteImport } from './routes/_app.scanner'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppRoute = AppRouteImport.update({
+  id: '/_app',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppDashboardRoute = AppDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppFarmRoute = AppFarmRouteImport.update({
+  id: '/farm',
+  path: '/farm',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppForecastRoute = AppForecastRouteImport.update({
+  id: '/forecast',
+  path: '/forecast',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppHotspotsRoute = AppHotspotsRouteImport.update({
+  id: '/hotspots',
+  path: '/hotspots',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppPestsRoute = AppPestsRouteImport.update({
+  id: '/pests',
+  path: '/pests',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppScannerRoute = AppScannerRouteImport.update({
+  id: '/scanner',
+  path: '/scanner',
+  getParentRoute: () => AppRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/login': typeof LoginRoute
+  '/dashboard': typeof AppDashboardRoute
+  '/farm': typeof AppFarmRoute
+  '/forecast': typeof AppForecastRoute
+  '/hotspots': typeof AppHotspotsRoute
+  '/pests': typeof AppPestsRoute
+  '/scanner': typeof AppScannerRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/login': typeof LoginRoute
+  '/dashboard': typeof AppDashboardRoute
+  '/farm': typeof AppFarmRoute
+  '/forecast': typeof AppForecastRoute
+  '/hotspots': typeof AppHotspotsRoute
+  '/pests': typeof AppPestsRoute
+  '/scanner': typeof AppScannerRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_app': typeof AppRouteWithChildren
+  '/login': typeof LoginRoute
+  '/_app/dashboard': typeof AppDashboardRoute
+  '/_app/farm': typeof AppFarmRoute
+  '/_app/forecast': typeof AppForecastRoute
+  '/_app/hotspots': typeof AppHotspotsRoute
+  '/_app/pests': typeof AppPestsRoute
+  '/_app/scanner': typeof AppScannerRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/login'
+    | '/dashboard'
+    | '/farm'
+    | '/forecast'
+    | '/hotspots'
+    | '/pests'
+    | '/scanner'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/login'
+    | '/dashboard'
+    | '/farm'
+    | '/forecast'
+    | '/hotspots'
+    | '/pests'
+    | '/scanner'
+  id:
+    | '__root__'
+    | '/'
+    | '/_app'
+    | '/login'
+    | '/_app/dashboard'
+    | '/_app/farm'
+    | '/_app/forecast'
+    | '/_app/hotspots'
+    | '/_app/pests'
+    | '/_app/scanner'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AppRoute: typeof AppRouteWithChildren
+  LoginRoute: typeof LoginRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +145,89 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_app': {
+      id: '/_app'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/dashboard': {
+      id: '/_app/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof AppDashboardRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/farm': {
+      id: '/_app/farm'
+      path: '/farm'
+      fullPath: '/farm'
+      preLoaderRoute: typeof AppFarmRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/forecast': {
+      id: '/_app/forecast'
+      path: '/forecast'
+      fullPath: '/forecast'
+      preLoaderRoute: typeof AppForecastRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/hotspots': {
+      id: '/_app/hotspots'
+      path: '/hotspots'
+      fullPath: '/hotspots'
+      preLoaderRoute: typeof AppHotspotsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/pests': {
+      id: '/_app/pests'
+      path: '/pests'
+      fullPath: '/pests'
+      preLoaderRoute: typeof AppPestsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/scanner': {
+      id: '/_app/scanner'
+      path: '/scanner'
+      fullPath: '/scanner'
+      preLoaderRoute: typeof AppScannerRouteImport
+      parentRoute: typeof AppRoute
+    }
   }
 }
 
+interface AppRouteChildren {
+  AppDashboardRoute: typeof AppDashboardRoute
+  AppFarmRoute: typeof AppFarmRoute
+  AppForecastRoute: typeof AppForecastRoute
+  AppHotspotsRoute: typeof AppHotspotsRoute
+  AppPestsRoute: typeof AppPestsRoute
+  AppScannerRoute: typeof AppScannerRoute
+}
+
+const AppRouteChildren: AppRouteChildren = {
+  AppDashboardRoute: AppDashboardRoute,
+  AppFarmRoute: AppFarmRoute,
+  AppForecastRoute: AppForecastRoute,
+  AppHotspotsRoute: AppHotspotsRoute,
+  AppPestsRoute: AppPestsRoute,
+  AppScannerRoute: AppScannerRoute,
+}
+
+const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AppRoute: AppRouteWithChildren,
+  LoginRoute: LoginRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
