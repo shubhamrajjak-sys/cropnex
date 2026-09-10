@@ -10,9 +10,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_app/pests")({
   head: () => ({
     meta: [
-      { title: "Pest Monitoring — KrishiRakshak AI" },
+      { title: "Pest Monitoring — CROPNEX" },
       { name: "description", content: "Smart IoT pest traps, live species detection feed and pest risk trends." },
-      { property: "og:title", content: "Pest Monitoring — KrishiRakshak AI" },
+      { property: "og:title", content: "Pest Monitoring — CROPNEX" },
       { property: "og:description", content: "Connected traps stream pest counts into the risk engine." },
     ],
   }),

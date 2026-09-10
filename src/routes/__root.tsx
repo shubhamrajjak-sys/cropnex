@@ -79,14 +79,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "KrishiRakshak AI — Crop Health Early Warning" },
+      { title: "CROPNEX — Crop Health Early Warning" },
       {
         name: "description",
         content:
           "AI-powered crop-health early warning and decision-support platform: detect early, predict risk, act smart.",
       },
-      { name: "author", content: "KrishiRakshak AI" },
-      { property: "og:title", content: "KrishiRakshak AI" },
+      { name: "author", content: "CROPNEX" },
+      { property: "og:title", content: "CROPNEX" },
       { property: "og:description", content: "Detect Early. Predict Risk. Act Smart." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

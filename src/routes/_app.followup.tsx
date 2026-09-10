@@ -10,9 +10,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_app/followup")({
   head: () => ({
     meta: [
-      { title: "Follow-up Monitoring — KrishiRakshak AI" },
+      { title: "Follow-up Monitoring — CROPNEX" },
       { name: "description", content: "Day 0 to Day 14 follow-up workflow showing whether risk actually fell after intervention." },
-      { property: "og:title", content: "Follow-up Monitoring — KrishiRakshak AI" },
+      { property: "og:title", content: "Follow-up Monitoring — CROPNEX" },
       { property: "og:description", content: "Continuous monitoring, not one-time diagnosis." },
     ],
   }),

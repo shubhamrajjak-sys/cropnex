@@ -10,9 +10,9 @@ import { HOTSPOTS, riskLevelFromScore, type Hotspot } from "@/lib/demo-data";
 export const Route = createFileRoute("/_app/hotspots")({
   head: () => ({
     meta: [
-      { title: "GIS Hotspot Map — KrishiRakshak AI" },
+      { title: "GIS Hotspot Map — CROPNEX" },
       { name: "description", content: "Village-level disease and pest hotspots with risk levels, trends and assigned workers." },
-      { property: "og:title", content: "GIS Hotspot Map — KrishiRakshak AI" },
+      { property: "og:title", content: "GIS Hotspot Map — CROPNEX" },
       { property: "og:description", content: "Interactive outbreak map for agriculture officials." },
     ],
   }),

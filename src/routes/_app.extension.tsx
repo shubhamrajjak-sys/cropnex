@@ -11,9 +11,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_app/extension")({
   head: () => ({
     meta: [
-      { title: "Extension Worker — KrishiRakshak AI" },
+      { title: "Extension Worker — CROPNEX" },
       { name: "description", content: "Assigned villages, today's priority visits, farmer cases and expert escalation." },
-      { property: "og:title", content: "Extension Worker — KrishiRakshak AI" },
+      { property: "og:title", content: "Extension Worker — CROPNEX" },
       { property: "og:description", content: "Field work planning driven by risk, not routine." },
     ],
   }),

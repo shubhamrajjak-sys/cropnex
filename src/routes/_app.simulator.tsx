@@ -11,9 +11,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_app/simulator")({
   head: () => ({
     meta: [
-      { title: "KrishiRisk Simulator — KrishiRakshak AI" },
+      { title: "CropRisk Simulator — CROPNEX" },
       { name: "description", content: "What-if simulator: change rainfall, humidity, temperature, soil moisture, crop stage and pest load to see predicted risk." },
-      { property: "og:title", content: "KrishiRisk Simulator — KrishiRakshak AI" },
+      { property: "og:title", content: "CropRisk Simulator — CROPNEX" },
       { property: "og:description", content: "Model tomorrow's risk before it happens." },
     ],
   }),
@@ -70,7 +70,7 @@ function Simulator() {
     <>
       <PageHeader
         eyebrow="Standout feature"
-        title="KrishiRisk Simulator"
+        title="CropRisk Simulator"
         description="Move the sliders to see how weather, crop stage, pest pressure and your own preventive action change the predicted risk."
         actions={
           <Button variant="outline" onClick={() => setV(BASE)}>

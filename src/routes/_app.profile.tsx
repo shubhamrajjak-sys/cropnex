@@ -10,9 +10,9 @@ import { useSession } from "@/lib/session";
 export const Route = createFileRoute("/_app/profile")({
   head: () => ({
     meta: [
-      { title: "Profile — KrishiRakshak AI" },
-      { name: "description", content: "Account, farm registration and role details for the KrishiRakshak AI workspace." },
-      { property: "og:title", content: "Profile — KrishiRakshak AI" },
+      { title: "Profile — CROPNEX" },
+      { name: "description", content: "Account, farm registration and role details for the CROPNEX workspace." },
+      { property: "og:title", content: "Profile — CROPNEX" },
       { property: "og:description", content: "Your account and farm registration details." },
     ],
   }),

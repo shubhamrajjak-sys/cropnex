@@ -18,9 +18,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_app/risk-engine")({
   head: () => ({
     meta: [
-      { title: "AI Risk Engine — KrishiRakshak AI" },
+      { title: "AI Risk Engine — CROPNEX" },
       { name: "description", content: "How nine data sources fuse into disease, pest and yield risk with a recommended action." },
-      { property: "og:title", content: "AI Risk Engine — KrishiRakshak AI" },
+      { property: "og:title", content: "AI Risk Engine — CROPNEX" },
       { property: "og:description", content: "Multi-source fusion, not a single-image classifier." },
     ],
   }),

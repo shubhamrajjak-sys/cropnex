@@ -8,9 +8,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_app/field-intelligence")({
   head: () => ({
     meta: [
-      { title: "Field Intelligence — KrishiRakshak AI" },
+      { title: "Field Intelligence — CROPNEX" },
       { name: "description", content: "Satellite and ground data fusion that keeps working when cloud cover blocks satellite imagery." },
-      { property: "og:title", content: "Field Intelligence — KrishiRakshak AI" },
+      { property: "og:title", content: "Field Intelligence — CROPNEX" },
       { property: "og:description", content: "No single-source dependency: ground, weather and IoT keep the score alive." },
     ],
   }),

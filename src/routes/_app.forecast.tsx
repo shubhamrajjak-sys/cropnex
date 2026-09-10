@@ -19,9 +19,9 @@ import { FORECAST, RISK_FACTORS, RISK_SCORE, riskLevelFromScore } from "@/lib/de
 export const Route = createFileRoute("/_app/forecast")({
   head: () => ({
     meta: [
-      { title: "Risk Forecast — KrishiRakshak AI" },
+      { title: "Risk Forecast — CROPNEX" },
       { name: "description", content: "5-day disease, pest and weather risk forecast with explainable AI reasons." },
-      { property: "og:title", content: "Risk Forecast — KrishiRakshak AI" },
+      { property: "og:title", content: "Risk Forecast — CROPNEX" },
       { property: "og:description", content: "Early warning before symptoms become visible." },
     ],
   }),
@@ -39,7 +39,7 @@ function Forecast() {
         description="Projected risk for the next five days based on weather, crop stage, pest pressure and nearby reports."
         actions={
           <Button asChild variant="outline">
-            <Link to="/simulator">Open KrishiRisk Simulator</Link>
+            <Link to="/simulator">Open CropRisk Simulator</Link>
           </Button>
         }
       />

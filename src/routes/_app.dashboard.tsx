@@ -31,9 +31,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_app/dashboard")({
   head: () => ({
     meta: [
-      { title: "Farmer Dashboard — KrishiRakshak AI" },
+      { title: "Farmer Dashboard — CROPNEX" },
       { name: "description", content: "Farm health score, disease risk, pest activity, weather and recommended actions." },
-      { property: "og:title", content: "Farmer Dashboard — KrishiRakshak AI" },
+      { property: "og:title", content: "Farmer Dashboard — CROPNEX" },
       { property: "og:description", content: "Your farm's crop-health early warning at a glance." },
     ],
   }),
@@ -42,7 +42,7 @@ export const Route = createFileRoute("/_app/dashboard")({
 
 const QUICK_ACTIONS = [
   { to: "/scanner", label: "Scan Crop", icon: ScanLine },
-  { to: "/assistant", label: "Ask KrishiRakshak AI", icon: Bot },
+  { to: "/assistant", label: "Ask CROPNEX", icon: Bot },
   { to: "/forecast", label: "View Risk Forecast", icon: LineChartIcon },
   { to: "/outbreak", label: "Report Pest/Disease", icon: BugPlay },
   { to: "/farm", label: "My Farm", icon: Sprout },
