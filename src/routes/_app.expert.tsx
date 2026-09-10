@@ -11,9 +11,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_app/expert")({
   head: () => ({
     meta: [
-      { title: "Expert Validation — KrishiRakshak AI" },
+      { title: "Expert Validation — CROPNEX" },
       { name: "description", content: "Plant pathologists confirm, correct, reject or refer AI predictions to laboratories." },
-      { property: "og:title", content: "Expert Validation — KrishiRakshak AI" },
+      { property: "og:title", content: "Expert Validation — CROPNEX" },
       { property: "og:description", content: "Human-in-the-loop validation of every AI suspicion." },
     ],
   }),

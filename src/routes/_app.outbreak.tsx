@@ -14,9 +14,9 @@ import { CROPS, OUTBREAK_REPORTS } from "@/lib/demo-data";
 export const Route = createFileRoute("/_app/outbreak")({
   head: () => ({
     meta: [
-      { title: "Community Outbreak Intelligence — KrishiRakshak AI" },
+      { title: "Community Outbreak Intelligence — CROPNEX" },
       { name: "description", content: "Anonymously aggregated farmer reports reveal disease clusters before they spread." },
-      { property: "og:title", content: "Community Outbreak Intelligence — KrishiRakshak AI" },
+      { property: "og:title", content: "Community Outbreak Intelligence — CROPNEX" },
       { property: "og:description", content: "Cluster detection from community reports." },
     ],
   }),

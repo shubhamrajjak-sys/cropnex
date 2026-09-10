@@ -10,9 +10,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_app/lab")({
   head: () => ({
     meta: [
-      { title: "Lab Referral — KrishiRakshak AI" },
+      { title: "Lab Referral — CROPNEX" },
       { name: "description", content: "Laboratory referral workflow with sample collection, testing and result tracking." },
-      { property: "og:title", content: "Lab Referral — KrishiRakshak AI" },
+      { property: "og:title", content: "Lab Referral — CROPNEX" },
       { property: "og:description", content: "Low-confidence or high-risk cases go to the laboratory." },
     ],
   }),

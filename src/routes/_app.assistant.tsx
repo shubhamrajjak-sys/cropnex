@@ -11,9 +11,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_app/assistant")({
   head: () => ({
     meta: [
-      { title: "KrishiRakshak AI Assistant — Multilingual crop help" },
+      { title: "CROPNEX Assistant — Multilingual crop help" },
       { name: "description", content: "Ask about crop symptoms in English, Hindi, Marathi, Bengali, Tamil or Telugu with voice and image support." },
-      { property: "og:title", content: "KrishiRakshak AI Assistant" },
+      { property: "og:title", content: "CROPNEX Assistant" },
       { property: "og:description", content: "Multilingual farmer assistant with clear AI-suspicion wording." },
     ],
   }),
@@ -57,7 +57,7 @@ function Assistant() {
     <>
       <PageHeader
         eyebrow="Advise"
-        title="KrishiRakshak AI Assistant"
+        title="CROPNEX Assistant"
         description="Ask in your own language. The assistant always separates AI suspicion from confirmed diagnosis."
       />
 

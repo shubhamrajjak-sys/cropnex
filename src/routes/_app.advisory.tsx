@@ -7,9 +7,9 @@ import { IPM_STEPS } from "@/lib/demo-data";
 export const Route = createFileRoute("/_app/advisory")({
   head: () => ({
     meta: [
-      { title: "Smart Advisory — KrishiRakshak AI" },
+      { title: "Smart Advisory — CROPNEX" },
       { name: "description", content: "Integrated Pest Management advisory: monitor, cultural, mechanical, biological and chemical control only when necessary." },
-      { property: "og:title", content: "Smart Advisory — KrishiRakshak AI" },
+      { property: "og:title", content: "Smart Advisory — CROPNEX" },
       { property: "og:description", content: "IPM-first recommendations with safety-first chemical guidance." },
     ],
   }),

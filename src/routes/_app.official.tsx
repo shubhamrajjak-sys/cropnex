@@ -33,9 +33,9 @@ import {
 export const Route = createFileRoute("/_app/official")({
   head: () => ({
     meta: [
-      { title: "Official Dashboard — KrishiRakshak AI" },
+      { title: "Official Dashboard — CROPNEX" },
       { name: "description", content: "District-level crop health command centre: alerts, hotspots, disease distribution and response performance." },
-      { property: "og:title", content: "Official Dashboard — KrishiRakshak AI" },
+      { property: "og:title", content: "Official Dashboard — CROPNEX" },
       { property: "og:description", content: "Agriculture officials monitor outbreaks and deploy teams." },
     ],
   }),

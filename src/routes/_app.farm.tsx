@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_app/farm")({
   head: () => ({
     meta: [
-      { title: "My Farm — KrishiRakshak AI" },
+      { title: "My Farm — CROPNEX" },
       { name: "description", content: "Farm profile, plots, crop stage, soil, irrigation and health timeline." },
-      { property: "og:title", content: "My Farm — KrishiRakshak AI" },
+      { property: "og:title", content: "My Farm — CROPNEX" },
       { property: "og:description", content: "Plot-level crop health and monitoring status." },
     ],
   }),

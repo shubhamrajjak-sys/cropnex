@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_app/notifications")({
   head: () => ({
     meta: [
-      { title: "Notification Center — KrishiRakshak AI" },
+      { title: "Notification Center — CROPNEX" },
       { name: "description", content: "Disease, pest, weather, expert, lab and preventive action alerts in one place." },
-      { property: "og:title", content: "Notification Center — KrishiRakshak AI" },
+      { property: "og:title", content: "Notification Center — CROPNEX" },
       { property: "og:description", content: "Critical, warning and update alerts for your farm." },
     ],
   }),

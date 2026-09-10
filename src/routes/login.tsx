@@ -11,9 +11,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "Sign in — KrishiRakshak AI" },
-      { name: "description", content: "Choose a demo role to explore the KrishiRakshak AI crop-health platform." },
-      { property: "og:title", content: "Sign in — KrishiRakshak AI" },
+      { title: "Sign in — CROPNEX" },
+      { name: "description", content: "Choose a demo role to explore the CROPNEX crop-health platform." },
+      { property: "og:title", content: "Sign in — CROPNEX" },
       { property: "og:description", content: "Farmer, extension worker, expert and official workspaces." },
     ],
   }),
@@ -46,7 +46,7 @@ function LoginPage() {
           <span className="grid size-9 place-items-center rounded-xl bg-sidebar-primary text-sidebar-primary-foreground">
             <Leaf className="size-5" />
           </span>
-          <span className="text-sm font-bold">KrishiRakshak AI</span>
+          <span className="text-sm font-bold">CROPNEX</span>
         </Link>
         <div className="relative max-w-md">
           <h1 className="text-4xl font-bold leading-tight">Detect Early. Predict Risk. Act Smart.</h1>

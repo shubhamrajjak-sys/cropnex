@@ -5,9 +5,9 @@ import { Disclaimer, FlowDiagram, PageHeader, SectionCard } from "@/components/u
 export const Route = createFileRoute("/_app/architecture")({
   head: () => ({
     meta: [
-      { title: "AI Architecture — KrishiRakshak AI" },
+      { title: "AI Architecture — CROPNEX" },
       { name: "description", content: "Computer vision, risk prediction, weather intelligence, GIS, IoT, LLM advisory and expert validation in one engine." },
-      { property: "og:title", content: "AI Architecture — KrishiRakshak AI" },
+      { property: "og:title", content: "AI Architecture — CROPNEX" },
       { property: "og:description", content: "Presentation-ready architecture for SIH judges." },
     ],
   }),

@@ -13,9 +13,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_app/scanner")({
   head: () => ({
     meta: [
-      { title: "Crop Health Scanner — KrishiRakshak AI" },
+      { title: "Crop Health Scanner — CROPNEX" },
       { name: "description", content: "Upload or capture a crop image and get an explainable preliminary AI analysis." },
-      { property: "og:title", content: "Crop Health Scanner — KrishiRakshak AI" },
+      { property: "og:title", content: "Crop Health Scanner — CROPNEX" },
       { property: "og:description", content: "AI symptom analysis with confidence, severity and next steps." },
     ],
   }),
@@ -190,7 +190,7 @@ function Scanner() {
               </>
             ) : (
               <>
-                <ScanLine className="size-4" /> Analyse with KrishiRakshak AI
+                <ScanLine className="size-4" /> Analyse with CROPNEX
               </>
             )}
           </Button>

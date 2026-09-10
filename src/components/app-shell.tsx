@@ -43,7 +43,7 @@ const FARM_NAV: NavItem[] = [
   { to: "/forecast", label: "Risk Forecast", icon: LineChart },
   { to: "/pests", label: "Pest Monitoring", icon: Radar },
   { to: "/hotspots", label: "Hotspot Map", icon: Map },
-  { to: "/simulator", label: "KrishiRisk Simulator", icon: Gauge },
+  { to: "/simulator", label: "CropRisk Simulator", icon: Gauge },
   { to: "/assistant", label: "AI Assistant", icon: Bot },
   { to: "/advisory", label: "Smart Advisory", icon: ClipboardList },
   { to: "/followup", label: "Follow-up Monitoring", icon: RefreshCcw },
@@ -155,7 +155,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         <Leaf className="size-5" />
       </span>
       <span>
-        <span className="block text-sm font-bold text-sidebar-foreground">KrishiRakshak AI</span>
+        <span className="block text-sm font-bold text-sidebar-foreground">CROPNEX</span>
         <span className="block text-[10px] uppercase tracking-[0.14em] text-sidebar-foreground/50">
           Detect · Predict · Act
         </span>

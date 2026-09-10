@@ -6,9 +6,9 @@ import { ACCURACY_TREND, CONFUSION, LEARNING_STATS } from "@/lib/demo-data";
 export const Route = createFileRoute("/_app/learning")({
   head: () => ({
     meta: [
-      { title: "AI Learning Center — KrishiRakshak AI" },
+      { title: "AI Learning Center — CROPNEX" },
       { name: "description", content: "Model accuracy trend, expert and lab confirmations, corrections and the feedback loop that improves predictions." },
-      { property: "og:title", content: "AI Learning Center — KrishiRakshak AI" },
+      { property: "og:title", content: "AI Learning Center — CROPNEX" },
       { property: "og:description", content: "Every verified field observation makes the model better." },
     ],
   }),

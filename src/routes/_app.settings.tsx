@@ -12,9 +12,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/_app/settings")({
   head: () => ({
     meta: [
-      { title: "Settings — KrishiRakshak AI" },
+      { title: "Settings — CROPNEX" },
       { name: "description", content: "Notification channels, SMS and voice fallback, language and offline advisory preferences." },
-      { property: "og:title", content: "Settings — KrishiRakshak AI" },
+      { property: "og:title", content: "Settings — CROPNEX" },
       { property: "og:description", content: "Alerts that still reach farmers with poor connectivity." },
     ],
   }),

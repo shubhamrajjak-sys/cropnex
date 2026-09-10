@@ -20,13 +20,13 @@ import { Disclaimer, FlowDiagram } from "@/components/ui-kit";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "KrishiRakshak AI — Detect Early. Predict Risk. Act Smart." },
+      { title: "CROPNEX — Detect Early. Predict Risk. Act Smart." },
       {
         name: "description",
         content:
           "AI crop-health early warning platform combining crop images, weather, IoT pest traps, satellite intelligence and expert validation for Indian farmers.",
       },
-      { property: "og:title", content: "KrishiRakshak AI" },
+      { property: "og:title", content: "CROPNEX" },
       {
         property: "og:description",
         content: "SEE + PREDICT + MAP + VERIFY + LEARN — an end-to-end crop-health early warning system.",
@@ -61,7 +61,7 @@ function Landing() {
               <Leaf className="size-5" />
             </span>
             <span>
-              <span className="block text-sm font-bold">KrishiRakshak AI</span>
+              <span className="block text-sm font-bold">CROPNEX</span>
               <span className="block text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
                 SIH PS 26131
               </span>
@@ -92,7 +92,7 @@ function Landing() {
             <Sparkles className="size-3.5" /> Crop-health early warning & decision support
           </span>
           <h1 className="mt-5 max-w-3xl text-4xl font-extrabold leading-[1.05] sm:text-6xl">
-            KRISHIRAKSHAK <span className="text-primary">AI</span>
+            CROP<span className="text-primary">NEX</span>
           </h1>
           <p className="mt-3 text-lg font-semibold text-foreground/80 sm:text-2xl">
             Detect Early. Predict Risk. Act Smart.
@@ -132,7 +132,7 @@ function Landing() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <h2 className="text-2xl font-bold sm:text-3xl">Five layers of intelligence</h2>
         <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-          KrishiRakshak AI does not merely detect crop disease. It combines SEE + PREDICT + MAP + VERIFY + LEARN into an
+          CROPNEX does not merely detect crop disease. It combines SEE + PREDICT + MAP + VERIFY + LEARN into an
           end-to-end early warning system.
         </p>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
@@ -194,7 +194,7 @@ function Landing() {
       </section>
 
       <footer className="border-t border-border px-4 py-8 text-center text-xs text-muted-foreground sm:px-6">
-        KrishiRakshak AI · Smart India Hackathon Problem Statement 26131 · Demo build with simulated data
+        CROPNEX · Smart India Hackathon Problem Statement 26131 · Demo build with simulated data
       </footer>
     </div>
   );

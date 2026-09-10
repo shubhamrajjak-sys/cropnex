@@ -1,5 +1,5 @@
 /**
- * Central demo data layer for KrishiRakshak AI.
+ * Central demo data layer for CROPNEX.
  *
  * Every screen reads from this module. When a real backend (Lovable Cloud /
  * Supabase) is connected, each exported collection below maps 1:1 to a table
@@ -561,7 +561,7 @@ export const LANGUAGES = [
 export type LangCode = (typeof LANGUAGES)[number]["code"];
 
 export const ASSISTANT_GREETING: Record<LangCode, string> = {
-  en: "Namaste! I am KrishiRakshak AI. Ask about crop symptoms, weather risk or advisories. I share AI suspicions, not confirmed diagnoses.",
+  en: "Namaste! I am CROPNEX. Ask about crop symptoms, weather risk or advisories. I share AI suspicions, not confirmed diagnoses.",
   hi: "नमस्ते! मैं कृषिरक्षक AI हूँ। फसल के लक्षण, मौसम जोखिम या सलाह के बारे में पूछें। मैं केवल AI आधारित संभावना बताता हूँ, पुष्टि निदान नहीं।",
   mr: "नमस्कार! मी कृषीरक्षक AI आहे. पिकाची लक्षणे, हवामान धोका किंवा सल्ल्याबद्दल विचारा. मी फक्त AI शक्यता सांगतो, निश्चित निदान नाही.",
   bn: "নমস্কার! আমি কৃষিরক্ষক AI। ফসলের লক্ষণ, আবহাওয়ার ঝুঁকি বা পরামর্শ জিজ্ঞাসা করুন। আমি কেবল AI সন্দেহ জানাই, নিশ্চিত রোগনির্ণয় নয়।",

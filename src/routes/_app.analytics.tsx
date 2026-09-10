@@ -23,9 +23,9 @@ import { ACCURACY_TREND, CROP_CASES, RESPONSE_TIME, RISK_TREND, VILLAGE_CASES } 
 export const Route = createFileRoute("/_app/analytics")({
   head: () => ({
     meta: [
-      { title: "Analytics — KrishiRakshak AI" },
+      { title: "Analytics — CROPNEX" },
       { name: "description", content: "District analytics: case volumes, risk trends, response time and model performance." },
-      { property: "og:title", content: "Analytics — KrishiRakshak AI" },
+      { property: "og:title", content: "Analytics — CROPNEX" },
       { property: "og:description", content: "Evidence for policy and resource allocation." },
     ],
   }),
