@@ -6,7 +6,7 @@ Build a production-quality, responsive web application called “KrishiRakshak A
 
 TAGLINE:
 
-“Detect Early. Predict Risk. Act Smart.”
+“Detect Early. Predict Risk. Act Smart.”  
 
 
 
